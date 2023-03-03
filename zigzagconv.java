@@ -17,7 +17,7 @@ public class zigzagconv {
         while(str.length()!=0){
             
         }
-        //return ans.toString();
+        return ans.toString();
         
     }
 }
