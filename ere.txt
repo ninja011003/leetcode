@@ -1,0 +1,73 @@
+[
+[[0, 0, 'BREAK', 0, 0, 'BREAK', 0, 0, 'BREAK', 0],
+[0, 0, 'BREAK', 0, 0, 'BREAK', 0, 0, 'BREAK', 0],
+[0, 0, 'BREAK', 0, 0, 'BREAK', 0, 0, 'BREAK', 0],
+[0, 0, 'BREAK', 0, 0, 'BREAK', 0, 0, 'BREAK', 0],
+[0, 0, 'BREAK', 0, 0, 'BREAK', 0, 0, 'BREAK', 0]],
+
+[[0, 0, 'BREAK', 0, 0, 'BREAK', 0, 0, 'BREAK', 0], 
+[0, 0, 'BREAK', 0, 0, 'BREAK', 0, 0, 'BREAK', 0],
+[0, 0, 'BREAK', 0, 0, 'BREAK', 0, 0, 'BREAK', 0],
+[0, 0, 'BREAK', 0, 0, 'BREAK', 0, 0, 'BREAK', 0],
+[0, 0, 'BREAK', 0, 0, 'BREAK', 0, 0, 'BREAK', 0]],
+
+[[0, 0, 'BREAK', 0, 0, 'BREAK', 0, 0, 'BREAK', 0],
+[0, 0, 'BREAK', 0, 0, 'BREAK', 0, 0, 'BREAK', 0],
+[0, 0, 'BREAK', 0, 0, 'BREAK', 0, 0, 'BREAK', 0],
+[0, 0, 'BREAK', 0, 0, 'BREAK', 0, 0, 'BREAK', 0], 
+[0, 0, 'BREAK', 0, 0, 'BREAK', 0, 0, 'BREAK', 0]],
+
+[[0, 0, 'BREAK', 0, 0, 'BREAK', 0, 0, 'BREAK', 0],
+[0, 0, 'BREAK', 0, 0, 'BREAK', 0, 0, 'BREAK', 0],
+[0, 0, 'BREAK', 0, 0, 'BREAK', 0, 0, 'BREAK', 0],
+[0, 0, 'BREAK', 0, 0, 'BREAK', 0, 0, 'BREAK', 0],
+[0, 0, 'BREAK', 0, 0, 'BREAK', 0, 0, 'BREAK', 0]],
+
+[[0, 0, 'BREAK', 0, 0, 'BREAK', 0, 0, 'BREAK', 0],
+[0, 0, 'BREAK', 0, 0, 'BREAK', 0, 0, 'BREAK', 0],
+[0, 0, 'BREAK', 0, 0, 'BREAK', 0, 0, 'BREAK', 0],
+[0, 0, 'BREAK', 0, 0, 'BREAK', 0, 0, 'BREAK', 0],
+[0, 0, 'BREAK', 0, 0, 'BREAK', 0, 0, 'BREAK', 0]],
+
+[[0, 0, 'BREAK', 0, 0, 'BREAK', 0, 0, 'BREAK', 0],
+[0, 0, 'BREAK', 0, 0, 'BREAK', 0, 0, 'BREAK', 0], 
+[0, 0, 'BREAK', 0, 0, 'BREAK', 0, 0, 'BREAK', 0], 
+[0, 0, 'BREAK', 0, 0, 'BREAK', 0, 0, 'BREAK', 0], 
+[0, 0, 'BREAK', 0, 0, 'BREAK', 0, 0, 'BREAK', 0]]
+]
+
+
+
+
+[[{'name': 'SOftware engn lab', 'faculty': 'Valli', 'type': 'Practicals', 'credits': 2},
+ {'name': 'SOftware engn lab', 'faculty': 'Valli', 'type': 'Practicals', 'credits': 2},
+  'BREAK', 0, {'name': 'Information theory', 'faculty': 'Srini', 'type': 'Theory', 'credits': 3},
+   'BREAK', {'name': 'OS', 'faculty': 'Paul', 'type': 'Theory', 'credits': 3}, 0, 'BREAK', {'name': 'DAA', 'faculty': 'Mohan
+   
+
+
+
+
+   [
+    [{'Subject': 'Math', 'Faculty': 'Dr. Brown', 'Credits': 3},
+     {'Subject': 'Physics', 'Faculty': 'Dr. Brown', 'Credits': 4},
+     {'Break': True},
+     {'Subject': 'Physics', 'Faculty': 'Prof. Johnson', 'Credits': 4},
+     {'Break': True}, 
+     {'Subject': 'Biology', 'Faculty': 'Dr. Smith', 'Credits': 3},
+     {'Subject': 'Physics', 'Faculty': 'Dr. Smith', 'Credits': 4},
+     {'Subject': 'Physics', 'Faculty': 'Prof. Johnson', 'Credits': 4},
+     {'Break': True}, {'Subject': 'Biology', 'Faculty': 'Dr. Brown', 'Credits': 3}],
+
+
+    [{'Subject': 'Biology', 'Faculty': 'Dr. Brown', 'Credits': 3},
+     {'Subject': 'Physics', 'Faculty': 'Prof. Johnson', 'Credits': 4}, 
+     {'Break': True}, 
+     {'Subject': 'Math', 'Faculty': 'Dr. Brown', 'Credits': 3}, 
+     {'Break': True}, 
+     {'Subject': 'Biology', 'Faculty': 'Dr. Smith', 'Credits': 3}, 
+     {'Subject': 'Physics', 'Faculty': 'Dr. Smith', 'Credits': 4}, 
+     {'Subject': 'Biology', 'Faculty': 'Dr. Smith', 'Credits': 3}, 
+     {'Break': True}, {'Subject': 'Physics', 'Faculty': 'Dr. Brown', 'Credits': 4}],
+     
+    [{'Subject': 'Math', 'Faculty': 'Prof. Johnson', 'Credits': 3}, {'Subject': 'Math', 'Faculty': 'Dr. Smith', 'Credits': 3}, {'Break': True}, {'Subject': 'Physics', 'Faculty': 'Prof. Johnson', 'Credits': 4}, {'Break': True}, {'Subject': 'Math', 'Faculty': 'Dr. Smith', 'Credits': 3}, {'Subject': 'Math', 'Faculty': 'Prof. Johnson', 'Credits': 3}, {'Subject': 'Math', 'Faculty': 'Dr. Smith', 'Credits': 3}, {'Break': True}, {'Subject': 'Math', 'Faculty': 'Dr. Brown', 'Credits': 3}], [{'Subject': 'Biology', 'Faculty': 'Prof. Johnson', 'Credits': 3}, {'Subject': 'Math', 'Faculty': 'Prof. Johnson', 'Credits': 3}, {'Break': True}, {'Subject': 'Math', 'Faculty': 'Dr. Smith', 'Credits': 3}, {'Break': True}, {'Subject': 'Physics', 'Faculty': 'Dr. Smith', 'Credits': 4}, {'Subject': 'Math', 'Faculty': 'Prof. Johnson', 'Credits': 3}, {'Subject': 'Math', 'Faculty': 'Prof. Johnson', 'Credits': 3}, {'Break': True}, {'Subject': 'Biology', 'Faculty': 'Dr. Brown', 'Credits': 3}], [{'Subject': 'Physics', 'Faculty': 'Dr. Brown', 'Credits': 4}, {'Subject': 'Biology', 'Faculty': 'Dr. Brown', 'Credits': 3}, {'Break': True}, {'Subject': 'Physics', 'Faculty': 'Prof. Johnson', 'Credits': 4}, {'Break': True}, {'Subject': 'Biology', 'Faculty': 'Prof. Johnson', 'Credits': 3}, {'Subject': 'Biology', 'Faculty': 'Dr. Brown', 'Credits': 3}, {'Subject': 'Biology', 'Faculty': 'Dr. Brown', 'Credits': 3}, {'Break': True}, {'Subject': 'Math', 'Faculty': 'Dr. Smith', 'Credits': 3}]]
