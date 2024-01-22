@@ -29,8 +29,7 @@ board[i].length == 9
 board[i][j] is a digit or '.'.
 It is guaranteed that the input board has only one solution.
 */
-
-public class sodukuSolver {
+private class sodukuSolver {
     public void solveSudoku(char[][] board) {
         
     }
