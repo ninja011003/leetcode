@@ -67,6 +67,31 @@ public class TreeNode {
         }
         return root;
     }
+    private static void insert(TreeNode node, int value) {
+        if (value < node.val) {
+            if (node.left == null) {
+                node.left = new TreeNode(value);
+            } else {
+                insert(node.left, value);
+            }
+        } else {
+            if (node.right == null) {
+                node.right = new TreeNode(value);
+            } else {
+                insert(node.right, value);
+            }
+        }
+    }
+    public static TreeNode BSTreeCreator(Integer[] arr){
+        if (arr == null || arr.length == 0) {
+            return null;
+        }
+        TreeNode root = new TreeNode(arr[0]);
+        for (int i = 1; i < arr.length; i++) {
+            insert(root, arr[i]);
+        }
+        return root;
+    }
 
     public static void BFS(TreeNode root,List<Integer> arr){
         Queue<TreeNode> queue = new LinkedList<>();
@@ -154,6 +179,10 @@ public class TreeNode {
             g.drawLine(startX, startY, controlX, startY + (endY - startY) / 2);
             g.drawLine(controlX, startY + (endY - startY) / 2, endX, endY);
         }
+    }
+    public static void main(String[] args) {
+        Integer[]  arr ={5,2,6,4,null,null,7};
+        visualizeBinaryTree(treeCreator(arr));
     }
 }
 
