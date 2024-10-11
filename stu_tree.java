@@ -1,4 +1,5 @@
-
+import java.util.LinkedList;
+import java.util.Queue;
 import javax.swing.JPanel;
 import javax.swing.JFrame;
 import java.util.List;
@@ -7,107 +8,51 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.*;
 import java.awt.*;
-
-//definition of TreeNode
-/*
- * Author: S.Niranjan
- */
-public class TreeNode {
-    int val;
+import javax.swing.JPanel;
+import javax.swing.JFrame;
+class TreeNode{
+    Integer val;
     TreeNode left;
     TreeNode right;
 
-    TreeNode() {
+    TreeNode(Integer val){
+        this.val= val;
+        left = right = null;
     }
 
-    TreeNode(int val) {
-        this.val = val;
-    }
-
-    TreeNode(int val, TreeNode left, TreeNode right) {
-        this.val = val;
-        this.left = left;
-        this.right = right;
-    }
-    
-    public static void preOrderDFS(TreeNode root, List<Integer> arr) {
-        if (root != null) {
-            arr.add(root.val);
-            preOrderDFS(root.left, arr);
-            preOrderDFS(root.right, arr);
+    public static TreeNode createTree(Integer[] arr){
+        if(arr.length==0||arr[0]==null){
+            return null;
         }
-    }
-    //{1,2,3,4,5}
-    public static TreeNode treeCreator(Integer[] arr){
-        TreeNode root = new TreeNode(arr[0]);
-        TreeNode temp=root;
+        TreeNode  root = new TreeNode(arr[0]);
         Queue<TreeNode> queue = new LinkedList<>();
-        queue.add(temp);
+        queue.add(root);
         for(int i=1;i<arr.length;i+=2){
-            TreeNode current=queue.poll();
+            TreeNode cur = queue.poll();
             if(arr[i]!=null){
                 TreeNode newNode = new TreeNode(arr[i]);
-                current.left= newNode;
+                cur.left = newNode;
                 queue.add(newNode);
             }
             else{
-                current.left=null;
+                cur.left=null;
             }
             if(i+1==arr.length){
-                continue;
+                return root;
             }
             if(arr[i+1]!=null){
                 TreeNode newNode = new TreeNode(arr[i+1]);
-                current.right= newNode;
+                cur.right = newNode;
                 queue.add(newNode);
             }
             else{
-                current.right=null;
+                cur.right = null;
             }
         }
         return root;
-    }
-    private static void insert(TreeNode node, int value) {
-        if (value < node.val) {
-            if (node.left == null) {
-                node.left = new TreeNode(value);
-            } else {
-                insert(node.left, value);
-            }
-        } else {
-            if (node.right == null) {
-                node.right = new TreeNode(value);
-            } else {
-                insert(node.right, value);
-            }
-        }
-    }
-    public static TreeNode BSTreeCreator(Integer[] arr){
-        if (arr == null || arr.length == 0) {
-            return null;
-        }
-        TreeNode root = new TreeNode(arr[0]);
-        for (int i = 1; i < arr.length; i++) {
-            insert(root, arr[i]);
-        }
-        return root;
+
     }
 
-    public static void BFS(TreeNode root,List<Integer> arr){
-        Queue<TreeNode> queue = new LinkedList<>();
-        queue.add(root);
-        while(!queue.isEmpty()){
-            TreeNode current = queue.poll();
-            arr.add(current.val);
-            if(current.left!=null){
-                queue.add(current.left);
-            }
-            if(current.right!=null){
-                queue.add(current.right);
-            }
-        }
-    }
-    
     public static void visualizeBinaryTree(TreeNode root) {
         JFrame frame = new JFrame("Binary Tree Visualization");
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -117,7 +62,6 @@ public class TreeNode {
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }
-
     private static class BinaryTreePanel extends JPanel {
         private final TreeNode root;
         private final int nodeRadius = 25;
@@ -180,7 +124,86 @@ public class TreeNode {
             g.drawLine(controlX, startY + (endY - startY) / 2, endX, endY);
         }
     }
-    
 }
 
 
+
+public class stu_tree {
+    public static int max =1;
+    public static void findHeight(TreeNode root,int dist){
+        if(root!=null){
+            if(root.left==null&&root.right==null){
+                //leaf node
+                max = max>dist?max:dist;
+                return;
+            }
+            if(root.left!=null){
+                findHeight(root.left, dist+1);
+            }
+            if(root.right!=null){
+                findHeight(root.right, dist+1);
+            }
+        }
+        return ;
+    }
+
+    public static int findHeightRec(TreeNode root){
+        if(root==null){
+            return 0;
+        }
+        if(root.left==null&&root.right==null){
+            return 1;
+        }
+        else{
+            int leftH = findHeightRec(root.left);
+            int rightH = findHeightRec(root.right);
+            return 1 + (leftH>rightH?leftH:rightH);
+        }
+    }
+
+    public static void preOrderTrav(TreeNode root){
+        if(root==null)
+            return;
+        System.out.print(root.val+"->");
+        preOrderTrav(root.left);
+        preOrderTrav(root.right);
+
+    }
+
+    
+
+    public static void inOrderTrav(TreeNode root){
+        if(root==null)
+            return;
+        inOrderTrav(root.left);
+        System.out.print(root.val+"->");
+        inOrderTrav(root.right);
+    }
+
+    public static void postOrderTrav(TreeNode root){
+        if(root==null)
+            return;
+        postOrderTrav(root.left);
+        postOrderTrav(root.right);
+        System.out.print(root.val+"->");
+    }
+
+
+
+    
+
+    public static void main(String[] args) {
+        Integer[] arr ={1,2,3,4,5,null,null};
+        TreeNode root = TreeNode.createTree(arr);
+        // TreeNode.visualizeBinaryTree(root);
+        // findHeight(root, 1);
+        // System.out.println(max);
+        // System.out.println(findHeightRec(root));
+        preOrderTrav(root);
+        System.out.println();
+        inOrderTrav(root);
+        System.out.println();
+        postOrderTrav(root);
+
+    }
+}

@@ -19,6 +19,8 @@ public class ListNode {
             }
             System.out.println(head.val);
         }
+
+        
         public static ListNode ArrToLinkedList(int[] arr){
             ListNode head = new ListNode(arr[0]);
             ListNode cur = head;
